@@ -2,7 +2,7 @@
 
 
 
-Este repositório contém a documentação do desafio DIO: montar um ambiente com Kali Linux e Metasploitable 2, usar a ferramenta Medusa para executar ataques de força bruta em serviços (FTP, formulários web, SMB), registrar comandos, wordlists simples, evidências e recomendações de mitigação. Tudo pensado para ambiente de teste controlado (VirtualBox — host-only / rede interna).
+Este repositório contém a documentação do desafio DIO: montar um ambiente com Kali Linux e Metasploitable 2, usar a ferramenta Medusa para executar ataques de força bruta em serviços (FTP, formulários web, SMB), registrar comandos, wordlists simples, evidências e recomendações de mitigação. Tudo pensado para ambiente de teste controlado (VirtualBox-host-only) rede interna.
 
 
 
@@ -186,6 +186,7 @@ smbclient -L //192.168.56.20 -U msfadmin
 * Hardening: desabilitar serviços desnecessários; configurar FTP seguro (SFTP/FTPS) ou desativar FTP.
 * Whitelist de IPs para serviços administrativos, quando aplicável.
 * Educação: conscientizar sobre reutilização de senhas e engenharia social.
+
 
 
 
