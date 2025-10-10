@@ -43,9 +43,9 @@ Este repositório contém a documentação do desafio DIO: montar um ambiente co
 Descobrir serviços com nmap:
 
 
-
+```bash
 nmap -sV -p 21,22,80,139,445 192.168.56.101
-
+```
 
 
 **Ataque FTP com Medusa**
@@ -183,4 +183,5 @@ smbclient -L //192.168.56.20 -U msfadmin
 * Hardening: desabilitar serviços desnecessários; configurar FTP seguro (SFTP/FTPS) ou desativar FTP.
 * Whitelist de IPs para serviços administrativos, quando aplicável.
 * Educação: conscientizar sobre reutilização de senhas e engenharia social.
+
 
