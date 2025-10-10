@@ -27,8 +27,8 @@ Este repositório contém a documentação do desafio DIO: montar um ambiente co
 4. Estrutura das VMs (configuração sugerida)
 5. Instalar VirtualBox.
 6. Criar rede Host-Only (ou Internal Network) em VirtualBox (ex: vboxnet0).
-7. VM Kali: adaptador 1 → NAT (internet, opcional para instalar pacotes), adaptador 2 → Host-Only vboxnet0 (IP ex.: 192.168.56.102).
-8. VM Metasploitable2: 1 adaptador → Host-Only vboxnet0 (IP ex.: 192.168.56.101).
+7. VM Kali: adaptador 1 → NAT (internet, opcional para instalar pacotes), adaptador 2 → Host-Only vboxnet0 (IP 192.168.56.102).
+8. VM Metasploitable2: 1 adaptador → Host-Only vboxnet0 (IP 192.168.56.101).
 9. Verifique conectividade: no Kali, ping 192.168.56.101.
 10. Kali Linux ( medusa, nmap, enum4linux)
 11. Metasploitable 2 (contém serviços FTP, SMB, DVWA etc).
@@ -183,3 +183,4 @@ smbclient -L //192.168.56.20 -U msfadmin
 * Hardening: desabilitar serviços desnecessários; configurar FTP seguro (SFTP/FTPS) ou desativar FTP.
 * Whitelist de IPs para serviços administrativos, quando aplicável.
 * Educação: conscientizar sobre reutilização de senhas e engenharia social.
+
