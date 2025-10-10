@@ -21,15 +21,15 @@ Este repositório contém a documentação do desafio DIO: montar um ambiente co
 
 
 
-1. Configurar duas VMs (Kali e Metasploitable 2) no VirtualBox com rede host-only / interna.
-2. Realizar ataques de força bruta com Medusa em FTP, formulário web e password spraying no SMB (com enumeração de usuários).
-3. Documentar wordlists, comandos, validação de acesso e recomendações de mitigação.
-4. Estrutura das VMs (configuração sugerida)
-5. Instalar VirtualBox.
-6. Criar rede Host-Only (ou Internal Network) em VirtualBox (ex: vboxnet0).
-7. VM Kali: adaptador 1 → NAT (internet, opcional para instalar pacotes), adaptador 2 → Host-Only vboxnet0 (IP 192.168.56.102).
-8. VM Metasploitable2: 1 adaptador → Host-Only vboxnet0 (IP 192.168.56.101).
-9. Verifique conectividade: no Kali, ping 192.168.56.101.
+1.  Configurar duas VMs (Kali e Metasploitable 2) no VirtualBox com rede host-only / interna.
+2.  Realizar ataques de força bruta com Medusa em FTP, formulário web e password spraying no SMB (com enumeração de usuários).
+3.  Documentar wordlists, comandos, validação de acesso e recomendações de mitigação.
+4.  Estrutura das VMs (configuração sugerida)
+5.  Instalar VirtualBox.
+6.  Criar rede Host-Only (ou Internal Network) em VirtualBox (ex: vboxnet0).
+7.  VM Kali: adaptador 1 → NAT (internet, opcional para instalar pacotes), adaptador 2 → Host-Only vboxnet0 (IP 192.168.56.102).
+8.  VM Metasploitable2: 1 adaptador → Host-Only vboxnet0 (IP 192.168.56.101).
+9.  Verifique conectividade: no Kali, ping 192.168.56.101.
 10. Kali Linux ( medusa, nmap, enum4linux)
 11. Metasploitable 2 (contém serviços FTP, SMB, DVWA etc).
 12. Medusa (audit tool para brute force; módulo ex.: ftp, http\_form, smbnt).
@@ -186,6 +186,7 @@ smbclient -L //192.168.56.20 -U msfadmin
 * Hardening: desabilitar serviços desnecessários; configurar FTP seguro (SFTP/FTPS) ou desativar FTP.
 * Whitelist de IPs para serviços administrativos, quando aplicável.
 * Educação: conscientizar sobre reutilização de senhas e engenharia social.
+
 
 
 
