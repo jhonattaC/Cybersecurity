@@ -134,7 +134,7 @@ Validação: tente fazer login no navegador usando as credenciais encontradas
 \# Enumeração com enum4linux
 
 ```bash
-enum4linux -a 192.168.56.101 | tee enum4\_output.txt
+enum4linux -a 192.168.56.101 | tee enum4_output.txt
 ```
 
 
@@ -186,6 +186,7 @@ smbclient -L //192.168.56.20 -U msfadmin
 * Hardening: desabilitar serviços desnecessários; configurar FTP seguro (SFTP/FTPS) ou desativar FTP.
 * Whitelist de IPs para serviços administrativos, quando aplicável.
 * Educação: conscientizar sobre reutilização de senhas e engenharia social.
+
 
 
 
