@@ -26,7 +26,7 @@ Ele foi criado para fins de estudo sobre captura de eventos do teclado e prátic
 
 **Execução:**
 
-1. Rodando o script
+1. Executando o script:
 
 ```Bash
 Python .\keylogger_email
@@ -41,3 +41,4 @@ Python .\keylogger_email
 * Para proteger usuários, prefira soluções que detectem keyloggers (antivírus, EDR) e políticas organizacionais (controle de aplicações, whitelisting).
 * Eduque usuários sobre engenharia social e práticas de segurança (senhas, 2FA).
 * Se seu objetivo for pesquisa de segurança, use frameworks e ambientes reconhecidos (laboratórios isolados, ferramentas de pentest com consentimento).
+
