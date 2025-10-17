@@ -36,7 +36,7 @@ nmap -sV -p 21,22,80,139,445 192.168.56.101
 
 Objetivo: força bruta contra usuário conhecido (ex: admin) com uma wordlist pequena.
 
-# Exemplo: testar usuário admin com wordlists no host 192.168.56.101
+Exemplo: testar usuário admin com wordlists no host 192.168.56.101
 
 ```bash
 medusa -h 192.168.56.101 -U users.txt -P pass.txt -M ftp -t 6
@@ -117,4 +117,5 @@ smbclient -L //192.168.56.20 -U msfadmin
 * Hardening: desabilitar serviços desnecessários; configurar FTP seguro (SFTP/FTPS) ou desativar FTP.
 * Whitelist de IPs para serviços administrativos, quando aplicável.
 * Educação: conscientizar sobre reutilização de senhas e engenharia social.
+
 
