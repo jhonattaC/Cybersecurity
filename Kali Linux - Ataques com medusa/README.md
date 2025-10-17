@@ -60,7 +60,7 @@ ftp 192.168.56.101
 
 DVWA costuma ter login em /dvwa/login.php. Exemplo de uso do módulo http\_form (sintaxe pode variar conforme versão do Medusa; ajustar conforme sua instalação):
 
-# Exemplo genérico de http\_form (substitua os campos conforme o formulário real)
+Exemplo genérico de http\_form (substitua os campos conforme o formulário real)
 
 ```bash
 -m PAGE: medusa -h 192.168.56.101 -U users.txt -P pass.txt -M http \
@@ -117,3 +117,4 @@ smbclient -L //192.168.56.20 -U msfadmin
 * Hardening: desabilitar serviços desnecessários; configurar FTP seguro (SFTP/FTPS) ou desativar FTP.
 * Whitelist de IPs para serviços administrativos, quando aplicável.
 * Educação: conscientizar sobre reutilização de senhas e engenharia social.
+
