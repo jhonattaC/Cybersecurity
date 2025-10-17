@@ -22,13 +22,14 @@ Ele foi criado para fins de estudo sobre captura de eventos do teclado e prátic
 1. Um listener captura eventos de teclado (teclas pressionadas).
 2. Os eventos são registrados em uma variável/estrutura de dados.
 3. O projeto originalmente demonstra o envio periódico desses registros por e‑mail.
+4. A extensão .pyw do nosso código, executa sem que o usuário perceba.
 
 **Execução:**
 
 1. Rodando o script
 
 ```Bash
-Python.\keylogger_email
+Python .\keylogger_email
 ```
 
 2. Abra bloco de notas ou apps de mensagens, digite diversas letras, números, etc...
