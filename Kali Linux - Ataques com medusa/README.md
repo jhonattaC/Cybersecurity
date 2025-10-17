@@ -42,12 +42,12 @@ medusa -h 192.168.56.101 -U users.txt -P pass.txt -M ftp -t 6
 
 **Explicação das flags:**
 
--h host alvo
--u usuário único (use -U para arquivo de usuários)
--P caminho da wordlist de senhas
--M ftp módulo FTP
--T 6 threads (ajuste conforme ambiente)
--f encerra ao encontrar credenciais válidas
+* h host alvo
+* u usuário único (use -U para arquivo de usuários)
+* P caminho da wordlist de senhas
+* M ftp módulo FTP
+* T 6 threads (ajuste conforme ambiente)
+* f encerra ao encontrar credenciais válidas
 
 3. Validação, após encontrar credenciais faça login com ftp:
 
@@ -114,4 +114,5 @@ smbclient -L //192.168.56.20 -U msfadmin
 * Hardening: desabilitar serviços desnecessários; configurar FTP seguro (SFTP/FTPS) ou desativar FTP.
 * Whitelist de IPs para serviços administrativos, quando aplicável.
 * Educação: conscientizar sobre reutilização de senhas e engenharia social.
+
 
